@@ -29,12 +29,12 @@ public class Inicio extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Nombredeusuario = new javax.swing.JTextField();
+        Contraseña = new javax.swing.JPasswordField();
+        Ingresar = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
+        vercontraseña = new javax.swing.JButton();
+        ocultarcontraseña = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,27 +47,27 @@ public class Inicio extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
         jLabel2.setText("Contraseña: ");
 
-        jButton1.setText("Ingresar");
-        jButton1.setEnabled(false);
+        Ingresar.setText("Ingresar");
+        Ingresar.setEnabled(false);
 
-        jButton2.setText("Salir");
+        Salir.setText("Salir");
 
-        jButton3.setText("ver");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        vercontraseña.setText("ver");
+        vercontraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                vercontraseñaActionPerformed(evt);
             }
         });
-        jButton3.addKeyListener(new java.awt.event.KeyAdapter() {
+        vercontraseña.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jButton3KeyTyped(evt);
+                vercontraseñaKeyTyped(evt);
             }
         });
 
-        jButton4.setText("ocultar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        ocultarcontraseña.setText("ocultar");
+        ocultarcontraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                ocultarcontraseñaActionPerformed(evt);
             }
         });
 
@@ -79,22 +79,22 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(80, 80, 80)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton2)
+                        .addComponent(Salir)
                         .addGap(73, 73, 73)
-                        .addComponent(jButton1))
+                        .addComponent(Ingresar))
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addComponent(jLabel1)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Nombredeusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addComponent(jLabel2)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jPasswordField1)))
+                            .addComponent(Contraseña)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(vercontraseña)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton4)))
+                        .addComponent(ocultarcontraseña)))
                 .addContainerGap(60, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -103,19 +103,19 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(97, 97, 97)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Nombredeusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ocultarcontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(vercontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(224, 224, 224)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(Salir)
+                    .addComponent(Ingresar))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
@@ -152,17 +152,17 @@ public class Inicio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void vercontraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vercontraseñaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_vercontraseñaActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void ocultarcontraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ocultarcontraseñaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_ocultarcontraseñaActionPerformed
 
-    private void jButton3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton3KeyTyped
+    private void vercontraseñaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_vercontraseñaKeyTyped
         // anda cuando escribas
-    }//GEN-LAST:event_jButton3KeyTyped
+    }//GEN-LAST:event_vercontraseñaKeyTyped
 
     /**
      * @param args the command line arguments
@@ -200,15 +200,15 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JPasswordField Contraseña;
+    private javax.swing.JButton Ingresar;
+    private javax.swing.JTextField Nombredeusuario;
+    private javax.swing.JButton Salir;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton ocultarcontraseña;
+    private javax.swing.JButton vercontraseña;
     // End of variables declaration//GEN-END:variables
 }
