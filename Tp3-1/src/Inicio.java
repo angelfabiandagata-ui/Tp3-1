@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -47,10 +50,31 @@ public class Inicio extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Sitka Text", 0, 14)); // NOI18N
         jLabel2.setText("Contraseña: ");
 
+        Nombredeusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombredeusuarioActionPerformed(evt);
+            }
+        });
+
+        Contraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContraseñaActionPerformed(evt);
+            }
+        });
+
         Ingresar.setText("Ingresar");
-        Ingresar.setEnabled(false);
+        Ingresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                IngresarActionPerformed(evt);
+            }
+        });
 
         Salir.setText("Salir");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
+            }
+        });
 
         vercontraseña.setText("ver");
         vercontraseña.addActionListener(new java.awt.event.ActionListener() {
@@ -163,6 +187,24 @@ public class Inicio extends javax.swing.JFrame {
     private void vercontraseñaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_vercontraseñaKeyTyped
         // anda cuando escribas
     }//GEN-LAST:event_vercontraseñaKeyTyped
+
+    private void ContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContraseñaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ContraseñaActionPerformed
+
+    private void NombredeusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombredeusuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombredeusuarioActionPerformed
+
+    private void IngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarActionPerformed
+       if(Nombredeusuario.getText().equals("alumno@ulp.edu.ar") && Contraseña.getText().equals("12345678"))
+        {JOptionPane.showMessageDialog(this, "¡Bienvenido!");  } 
+        else{JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos"); }
+    }//GEN-LAST:event_IngresarActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_SalirActionPerformed
 
     /**
      * @param args the command line arguments
